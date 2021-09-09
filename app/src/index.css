@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* App component  */
+.App{}
+
+h1{}
+
+a{
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{}
+
+/* Search Component fine tuning */
+.search{
+  display: flex;
+  justify-content: flex-end;
+  padding: 3rem;
+  
 }
+.inputs{
+  display:flex;
+  justify-content: flex-end;
+}
+
+.submit{
+  margin: 0 .5rem;
+}
+
+
+/* DrinkList component */
+.drinkList{}
+
+h4{}
+
+/* DrinkListItem component */
+.text-center img{}
+
+h3{}
+
+/* Drink component */
+button{
+  margin-bottom:1rem;
+}
+
+.ingredients{
+  line-height: .5;
+}
+
+.instructions{
+  margin-top: 3rem;
+}
+
+p{
+  line-height: .5;
+}
+
+

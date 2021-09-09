@@ -2,6 +2,7 @@ import React, {  useState } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { allTheDrinks } from '../actions/drinkActions';
+import { Form, FormGroup, Input, Button } from 'reactstrap';
 
 const Search = (props) => {
     const [search, setSearch] = useState('');
@@ -13,17 +14,18 @@ const Search = (props) => {
     
     const handleSubmit= (e) => {
         e.preventDefault();
-        
         props.allTheDrinks(search);
-        push('/drinks')
+        push('/drinks');
     }
 
     return (
         <div className='search'>
-            <form>
-                <input onChange={handleChange} type='text' placeholder='Search By Name' />
-                <input onClick={handleSubmit} type='submit' value='Search'/>
-            </form>
+            <Form>
+                <FormGroup className='inputs'>
+                    <Input onChange={handleChange} type='text' placeholder='Search By Name' />
+                    <Button className='submit' onClick={handleSubmit}>Submit</Button>
+                </FormGroup>
+            </Form>
         </div>
     )
 }
@@ -37,7 +39,5 @@ const mapStateToProps = (state) => {
 
     })
 }
-
-// export default connect(mapStateToProps, {fetchStart, fetchSuccess, fetchFail})(Search);
 
 export default connect(mapStateToProps, { allTheDrinks })(Search);
