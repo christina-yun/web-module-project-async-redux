@@ -10,8 +10,9 @@ export const allTheDrinks = (search) => dispatch => {
             .then(res => {
                 dispatch({ type: FETCH_SUCCESS, payload: res.data.drinks})
             })
-            .catch(err => {
-                dispatch({ type: FETCH_FAIL, payload:err })
+            .catch(error => {
+                console.log('error', {error})
+                dispatch({ type: FETCH_FAIL, payload:error })
             })
     }
 

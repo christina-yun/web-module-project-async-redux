@@ -90,7 +90,7 @@ export const drinkReducer = (state = initialState, action) => {
         case(FETCH_START):
             return({
                 ...state,
-                drinks:{},
+                // drinks:{},
                 isFetching: true,
                 error: ''
             });
@@ -104,7 +104,7 @@ export const drinkReducer = (state = initialState, action) => {
         case(FETCH_FAIL):
             return({
                 ...state,
-                drinks:{},
+                // drinks:{},
                 isFetching: false,
                 error: action.payload
             })
