@@ -15,8 +15,6 @@ const Drink = (props) => {
         return input === '' ? '' : input;
     }
 
-    
-
     return (
         <div className='drink'>
             <div className='drink-details'>
@@ -107,8 +105,9 @@ const Drink = (props) => {
                     {drink.strInstructions}</p>
                 </div>
             </div>
-            <section>
+            <section className='drink-buttons'>
                 <span>Favorite</span>
+                <span onClick={()=> {push('/drinks')}}>Drink List</span>
             </section> 
         </div>
     )
