@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const DrinkListItem = (props) => {
     const { drink } = props;
-    console.log(drink)
     return(
         <div className='drink-card'>
             

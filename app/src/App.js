@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 
 import Search from './components/Search';
 import DrinkList from './components/DrinkList';
@@ -10,7 +10,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <h1>Drink App</h1>
+      <Link to='/'><h1>Drink App</h1></Link>
       <Search />
       <div className='container'>
         <Switch>

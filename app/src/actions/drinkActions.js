@@ -4,6 +4,17 @@ export const FETCH_START = 'FETCH_START';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_FAIL = 'FETCH_FAIL';
 
+export const allTheDrinks = (search) => dispatch => {
+        dispatch({ type: FETCH_START });
+        axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`)
+            .then(res => {
+                dispatch({ type: FETCH_SUCCESS, payload: res.data.drinks})
+            })
+            .catch(err => {
+                dispatch({ type: FETCH_FAIL, payload:err })
+            })
+    }
+
 export const fetchStart = () => {
     return({type: FETCH_START});
 }
