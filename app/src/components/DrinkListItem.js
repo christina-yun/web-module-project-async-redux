@@ -7,7 +7,7 @@ const DrinkListItem = (props) => {
     const { drink } = props;
     return(
             <Col sm='3'>
-            <Card body className='text-center'>
+            <Card body width='350px' className='text-center'>
                 <img src={drink.strDrinkThumb} width='250px' alt='a cocktail'/>
                 <h3>{drink.strDrink}</h3>
                 <Link to={`/drinks/${drink.idDrink}`} className='view'>

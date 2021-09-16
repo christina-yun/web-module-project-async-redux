@@ -23,7 +23,7 @@ const Search = (props) => {
             <Form>
                 <FormGroup className='inputs'>
                     <Input onChange={handleChange} type='text' placeholder='Search By Name' />
-                    <Button className='submit' onClick={handleSubmit}>Submit</Button>
+                    <Button className='submit' onClick={handleSubmit}>Search</Button>
                 </FormGroup>
             </Form>
         </div>

@@ -10,7 +10,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <Link to='/'><h1>Drink App</h1></Link>
+      <Link to='/'><h1>Online Bartender</h1></Link>
       <Search />
       <div className='container'>
         <Switch>
@@ -20,9 +20,6 @@ function App(props) {
           <Route path='/drinks'>
             <DrinkList />
           </Route>
-          {/* <Route path='/'>
-            <Redirect to='/drinks'/>
-          </Route> */}
         </Switch>
       </div>
     </div>
