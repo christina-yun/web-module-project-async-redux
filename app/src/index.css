@@ -35,7 +35,12 @@ a{
 h4{}
 
 /* DrinkListItem component */
-.text-center img{}
+.drink-image{
+  width:17rem;
+}
+.text-center{
+  width:20rem;
+}
 
 h3{}
 
