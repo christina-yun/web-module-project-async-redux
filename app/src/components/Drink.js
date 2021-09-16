@@ -20,7 +20,7 @@ const Drink = (props) => {
         <div className='drink'>
             <Card>
                 <CardBody>
-                    <CardImg top width='75%' src={drink.strDrinkThumb} />
+                    <CardImg top width='50%' src={drink.strDrinkThumb} />
                     <CardTitle tag='h3'>
                         {drink.strDrink}
                     </CardTitle>

@@ -40,11 +40,23 @@ h4{}
 h3{}
 
 /* Drink component */
-button{
-  margin-bottom:1rem;
+.drink{
+  margin:2rem;
+}
+.drink-buttons{
+  margin-top:1rem;
+}
+
+.mb-2{
+  margin:1rem;
+}
+
+.card-text{
+  margin:1rem;
 }
 
 .ingredients{
+  padding-top:1rem;
   line-height: .5;
 }
 
