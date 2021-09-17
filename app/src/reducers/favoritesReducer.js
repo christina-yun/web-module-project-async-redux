@@ -1,24 +1,25 @@
-
+import { ADD_FAVORITE, REMOVE_FAVORITE } from "../actions/favoriteActions";
 const initialState = {
-    favorites:[]
+    favorites:[],
+    isFavorite: false
 };
 
 export const favoritesReducer = (state = initialState, action) => {
     switch(action.type) {
-        case('ADD_FAVORITE'): {
+        case(ADD_FAVORITE): {
             return {
                 ...state,
                 favorites:[...state.favorites,
-                // {
-                //     title:action.payload
-                // }
-            ]
+                action.payload
+                ],
+                isFavorite: true
             };
         }
-        case('REMOVE_FAVORITE'): {
+        case(REMOVE_FAVORITE): {
             return {
                 ...state,
-                // favorites: state.favorites.filter(item => (action.payload !== item.id))
+                favorites: state.favorites.filter(item => (action.payload !== item.id)),
+                isFavorite: false
             }
         }
         default:

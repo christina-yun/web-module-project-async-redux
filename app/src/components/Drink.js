@@ -1,7 +1,9 @@
 import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addFavorite } from '../actions/favoriteActions';
 import { Button, Card, CardImg, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+
 
 const Drink = (props) => {
 
@@ -16,6 +18,10 @@ const Drink = (props) => {
         return input === '' ? '' : input;
     }
 
+    const handleFave = () => {
+        props.addFavorite(drink);
+    }
+
     return (
         <div className='drink'>
             <Card>
@@ -24,7 +30,7 @@ const Drink = (props) => {
                     <CardTitle tag='h3'>
                         {drink.strDrink}
                     </CardTitle>
-                    <Button color='danger'> ♥️ </Button>
+                    <Button onClick={handleFave} color='danger'> ♥️ </Button>
                     <CardSubtitle tag='h5'className='mb-2 text-muted'>
                         {drink.strGlass}
                     </CardSubtitle>
@@ -111,7 +117,8 @@ const Drink = (props) => {
 }
 const mapStateToProps = (state) => {
     return ({
-        drinks: state.cocktail.drinks
+        drinks: state.cocktail.drinks,
+        favorites: state.faves.favorites
     })
 }
-export default connect(mapStateToProps)(Drink);
+export default connect(mapStateToProps, { addFavorite })(Drink);
